@@ -1,9 +1,9 @@
 import { Route } from "react-router-dom";
 import { createRoutesFromElements } from "react-router-dom";
 import { createBrowserRouter } from "react-router-dom";
-import { Home } from "./pages/homes";
-import { Payment } from "./pages/payments";
-import { PaymentSuccess } from "./pages/payment-successes";
+import { Home } from "./pages/home";
+import { Payment } from "./pages/payment";
+import { PaymentSuccess } from "./pages/payment-success";
 import { MainLayout } from "./layouts/main-layout";
 
 const routes = (
