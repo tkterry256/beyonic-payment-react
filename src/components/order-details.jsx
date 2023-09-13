@@ -1,4 +1,9 @@
-import { formatDate, formatMoney, truncateText } from "../utils/utils";
+import {
+  formatDate,
+  formatMoney,
+  singularPlural,
+  truncateText,
+} from '../utils/utils';
 
 function OrderDetails({ order }) {
   const { product } = order;
@@ -15,7 +20,9 @@ function OrderDetails({ order }) {
         <span> {formatMoney(product.unitAmount)} </span>
 
         <h4>Quantity:</h4>
-        <span> {order.quantity} </span>
+        <span>
+          {order.quantity} {singularPlural(order.quantity, 'unit', 'units')}
+        </span>
 
         <h4>Description:</h4>
         <span> {truncateText(product.description, 64)} </span>
