@@ -32,7 +32,7 @@ function PaymentForm() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-rows-2 grid-flow-col grid-cols-[1.3fr_1fr] items-center">
         <h3 className="text-sm font-semibold text-gray-600">Unit Amount</h3>
-        <p>{formatMoney(product.unitAmount)}</p>
+        <p className="text-lg">{formatMoney(product.unitAmount)}</p>
         <h3 className="text-sm font-semibold text-gray-600">Quantity</h3>
         <div className="flex border-2 border-gray-700 text-xl">
           <button type="button" onClick={decrementQuantity} className="p-2">
@@ -50,19 +50,23 @@ function PaymentForm() {
           </button>
         </div>
       </div>
-      <div className="py-4">
+      <div className="py-4 flex flex-col gap-1">
         <h3 className="text-sm font-semibold text-gray-600">Total Amount</h3>
-        <p> {formatMoney(product.unitAmount * quantity)} </p>
+        <p className="text-lg font-semibold text-gray-700">
+          {" "}
+          {formatMoney(product.unitAmount * quantity)}{" "}
+        </p>
       </div>
       <div className="border-b mb-4"></div>
       <p className="text-red-600">{errors.quantity?.message}</p>
-      <div className="mb-4"></div>
-      <button
-        type="submit"
-        className="bg-brand py-1 px-3 text-gray-100 text-sm font-semibold rounded-sm w-full"
-      >
-        Proceed to pay
-      </button>
+      <div className="py-4">
+        <button
+          type="submit"
+          className="bg-brand py-1 px-3 text-gray-100 text-sm font-semibold rounded-sm w-full"
+        >
+          Proceed to pay
+        </button>
+      </div>
     </form>
   );
 

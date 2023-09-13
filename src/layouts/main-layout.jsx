@@ -5,7 +5,7 @@ function MainLayout() {
   return (
     <div>
       <Header />
-      <div className="p-4 max-w-sm mx-auto">
+      <div className="p-4 max-w-md mx-auto">
         <Outlet />
       </div>
     </div>

@@ -3,7 +3,7 @@ import {
   formatMoney,
   singularPlural,
   truncateText,
-} from '../utils/utils';
+} from "../utils/utils";
 
 function OrderDetails({ order }) {
   const { product } = order;
@@ -21,7 +21,7 @@ function OrderDetails({ order }) {
 
         <h4>Quantity:</h4>
         <span>
-          {order.quantity} {singularPlural(order.quantity, 'unit', 'units')}
+          {order.quantity} {singularPlural(order.quantity, "unit", "units")}
         </span>
 
         <h4>Description:</h4>
