@@ -53,16 +53,15 @@ function PaymentForm() {
       <div className="py-4 flex flex-col gap-1">
         <h3 className="text-sm font-semibold text-gray-600">Total Amount</h3>
         <p className="text-lg font-semibold text-gray-700">
-          {" "}
-          {formatMoney(product.unitAmount * quantity)}{" "}
+          {formatMoney(product.unitAmount * quantity)}
         </p>
       </div>
       <div className="border-b mb-4"></div>
-      <p className="text-red-600">{errors.quantity?.message}</p>
+      <p className="text-red-600 text-sm">{errors.quantity?.message}</p>
       <div className="py-4">
         <button
           type="submit"
-          className="bg-brand py-1 px-3 text-gray-100 text-sm font-semibold rounded-sm w-full"
+          className="bg-brand py-2 px-3 text-gray-100 text-sm font-semibold rounded-sm w-full"
         >
           Proceed to pay
         </button>
